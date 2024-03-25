@@ -121,16 +121,19 @@
 		}
 	}
 }
-
+.footer__link_container {
+	display:flex;
+	flex-direction:row;
+	gap:1.5rem;
+}
 .footer__link {
 	@include body_3;
 
-	display: flex;
-	align-items: center;
-	gap: .8rem;
-
+	font-weight:bold;
 	color: $light_gray;
 	transition: color .3s ease-in-out, opacity .3s ease-in-out;
+	height:25px;
+	line-height:25px;
 
 	&:hover,
 	&:focus {
@@ -141,10 +144,11 @@
 }
 
 .footer__link_icon {
-	display: block;
+	display: inline-block;
 	width: 2rem;
 	height: 2rem;
-
+	margin-right:.5rem;
+	vertical-align: middle;
 	object-fit: contain;
 }
 

@@ -126,17 +126,26 @@ const Footer = () => {
             KY1-1108, Cayman Islands.
           </p>
         </div>
-        <a className="footer__link" href="mailto:support@voyagemarkets.net">
-          <Image
-            className="footer__link_icon"
-            src="/images/mail.svg"
-            alt="envelope"
-            loading="lazy"
-            width={20}
-			height={20}
-          />
-          support@voyagemarkets.net
-        </a>
+        <div className="footer__link_container">
+          <a className="footer__link" href="mailto:support@voyagemarkets.net">
+            <Image
+              className="footer__link_icon"
+              src="/images/mail.svg"
+              alt="envelope"
+              loading="lazy"
+              width={20}
+        height={20}
+            />
+            support@voyagemarkets.net
+          </a>
+          <a className="footer__link" href="/privacy-policy">
+            Privacy Policy
+          </a>
+          <a className="footer__link" href="/terms-of-use">
+            Terms of Use
+          </a>
+        </div>
+       
       </div>
     </footer>
   );
