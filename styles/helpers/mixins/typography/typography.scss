@@ -1,0 +1,80 @@
+@mixin h1 {
+	font-family: $font_gotham;
+	font-size: 6.4rem;
+	font-weight: 700;
+}
+
+@mixin h2 {
+	font-family: $font_gotham;
+	font-size: 4.8rem;
+	font-weight: 700;
+}
+
+@mixin h3 {
+	font-family: $font_gotham;
+	font-size: 4.8rem;
+	font-weight: 300;
+}
+
+@mixin h4 {
+	font-size: 4.2rem;
+	font-weight: 600;
+}
+
+@mixin h5 {
+	font-size: 4.2rem;
+	font-weight: 300;
+}
+
+@mixin h6 {
+	font-family: $font_gotham;
+	font-weight: 700;
+
+	@include bp($point_2, min) {
+		font-size: 4rem;
+	}
+
+	@include bp($point_3) {
+		font-size: 3.6rem;
+	}
+}
+
+@mixin headline_1 {
+	font-family: $font_gotham;
+	font-size: 2.4rem;
+}
+
+@mixin headline_2 {
+	font-family: $font_gotham;
+	font-size: 2.2rem;
+	font-weight: 500;
+}
+
+@mixin headline_3 {
+	font-size: 2.2rem;
+	font-weight: 500;
+}
+
+@mixin headline_4 {
+	font-size: 1.8rem;
+	font-weight: 500;
+}
+
+@mixin body_1 {
+	font-size: 1.8rem;
+}
+
+@mixin body_2 {
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
+@mixin body_3 {
+	font-size: 1.2rem;
+}
+
+// offsets
+
+@mixin title_offset {
+	margin-bottom: 2rem;
+}

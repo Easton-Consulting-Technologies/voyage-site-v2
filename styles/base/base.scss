@@ -1,0 +1,115 @@
+@import 'family';
+@import 'reset';
+@import 'fonts';
+@import 'print';
+
+//------------------------------------------------------------base styles
+:root {
+	--full-screen: calc(var(--vh, 1vh) * 100);
+
+	--height-footer: 10rem;
+	--gl-hr-indent: 3.2rem;
+
+	@include bp($point_2, min) {
+		--height-header: 15.2rem;
+		--gl-vr-indent: 8rem;
+	}
+
+	@include bp($point_3) {
+		--height-header: 14.9rem;
+		--gl-vr-indent: 6rem;
+	}
+}
+
+html {
+	height: 100%;
+	font-weight: 400;
+	line-height: 1.33;
+	font-family: $font_1;
+
+	@include bp($point_0, min) {
+		font-size: calc(100vw / 1728 * 10);
+	}
+
+	@include bp($point_0 - 1, $point_1) {
+		font-size: 10px;
+	}
+
+	@include bp($point_1 - 1, $point_3) {
+		font-size: calc(100vw / 1200 * 10);
+	}
+
+	@include bp($point_3, $point_9) {
+		font-size: 10px;
+	}
+
+	@include bp($point_9 - 1) {
+		font-size: calc(100vw / 390 * 10);
+	}
+}
+
+body {
+	position: relative;
+
+	display: flex;
+	height: 100%;
+
+	font-size: $font_size_base;
+	color: $color_text_base;
+
+	-webkit-text-size-adjust: none;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+
+	background: $body_bg;
+
+	@supports (display: grid) {
+		display: block;
+	}
+}
+
+.wrapper {
+	position: relative;
+
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+	height: auto !important;
+
+	overflow-x: hidden;
+}
+
+.base {
+	width: 100%;
+	position: relative;
+	padding: var(--height-header) 0 0;
+
+	flex: 1 0 auto;
+}
+
+a {
+	text-decoration: none;
+	color: $color_link_base;
+
+	&:hover,
+	&:focus {
+		text-decoration: underline;
+	}
+}
+
+// for wp
+
+.editor-styles-wrapper .wp-block {
+	margin-bottom: 5rem;
+}
+
+html :where(.wp-block) {
+	max-width: 1200px;
+}
+
+.editor-styles-wrapper {
+	overflow-x: hidden;
+}
+
+//------------------------------------------------------------base styles###

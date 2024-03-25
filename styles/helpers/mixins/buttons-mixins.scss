@@ -1,0 +1,62 @@
+@mixin st_btn {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+
+	text-align: center;
+	white-space: nowrap;
+	font-family: $font_gotham;
+
+	cursor: pointer;
+
+	&[type='submit'] {
+		@include appearance(none);
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+	}
+}
+
+//color mixins:
+@mixin btn_style_purple {
+	@include st_btn;
+
+	font-weight: 500;
+	color: $white;
+	background: linear-gradient(270deg, $purple_2 13.57%, #492eaa 85.73%);
+
+	transition: opacity 0.3s ease;
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+@mixin btn_style_white {
+	text-transform: uppercase;
+	font-weight: 500;
+	color: $purple_1;
+
+	background-color: $white;
+	transition: background-color 0.3s ease, color 0.3s ease;
+
+	@include st_btn;
+
+	&:hover {
+		background-color: $purple_1;
+		color: $white;
+	}
+}
+
+//size mixins:
+@mixin btn_size_normal {
+	min-width: 13.2rem;
+	height: 4.8rem;
+	padding: 0 2.5rem;
+
+	border-radius: 4rem;
+	font-size: 1.4rem;
+	line-height: 1;
+}

@@ -1,0 +1,9 @@
+.btn_base {
+	@include btn_size_normal;
+	@include btn_style_white;
+}
+
+.btn_v1 {
+	@include btn_style_purple;
+	@include btn_size_normal;
+}

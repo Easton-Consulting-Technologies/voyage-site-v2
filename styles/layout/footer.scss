@@ -1,0 +1,163 @@
+.footer {
+	width: 100%;
+	min-height: var(--height-footer);
+	flex: 0 0 auto;
+
+	font-size: 1rem;
+	color: $light_gray;
+
+	background-color: $purple_0;
+	will-change: transform;
+
+	@include bp($point_2, min) {
+		padding: 12rem var(--gl-hr-indent);
+	}
+
+	@include bp($point_3) {
+		padding: 4.2rem var(--gl-hr-indent) 8rem;
+	}
+}
+
+.footer__in {
+	max-width: $page_width;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.footer__content {
+	position: relative;
+	display: flex;
+
+	@include bp($point_2, min) {
+		padding-bottom: 2rem;
+		margin-bottom: 4rem;
+	}
+
+	@include bp($point_3) {
+		flex-direction: column;
+		padding-bottom: 2.6rem;
+		margin-bottom: 3.4rem;
+	}
+
+	&::before {
+		position: absolute;
+		content: '';
+		bottom: 0;
+
+		border-bottom: 1px solid $purple_2;
+
+		@include bp($point_2, min) {
+			left: 0;
+			width: 100%;
+		}
+
+		@include bp($point_3) {
+			left: 50%;
+			width: 100vw;
+
+			transform: translateX(-50%);
+		}
+	}
+}
+
+.footer__logo {
+	flex-shrink: 0;
+	display: block;
+	width: 23.8rem;
+	height: 6.4rem;
+
+	&:not(:last-child) {
+		@include bp($point_3) {
+			margin-bottom: 4.4rem;
+		}
+	}
+}
+
+.footer__logo_img {
+	@include contain_img;
+}
+
+.footer__info {
+	display: flex;
+	flex-direction: column;
+
+	@include bp($point_2, min) {
+		max-width: 50%;
+		margin-left: auto;
+		gap: 0.8rem;
+
+		text-align: right;
+	}
+
+	@include bp($point_3) {
+		flex-direction: column-reverse;
+		gap: 1rem;
+	}
+
+	p {
+		font-size: 1.6rem;
+		font-weight: 400;
+	}
+}
+
+.footer__address {
+	@include body_2;
+	font-style: normal;
+}
+
+.footer__text_w {
+	&:not(:last-child) {
+		margin-bottom: 2rem;
+	}
+
+	p {
+		@include body_3;
+
+		line-height: normal;
+		text-align: justify;
+
+		&:not(:last-child) {
+			margin-bottom: 1.4rem;
+		}
+	}
+}
+
+.footer__link {
+	@include body_3;
+
+	display: flex;
+	align-items: center;
+	gap: .8rem;
+
+	color: $light_gray;
+	transition: color .3s ease-in-out, opacity .3s ease-in-out;
+
+	&:hover,
+	&:focus {
+		opacity: 0.8;
+		color: $light_blue;
+		text-decoration: none;
+	}
+}
+
+.footer__link_icon {
+	display: block;
+	width: 2rem;
+	height: 2rem;
+
+	object-fit: contain;
+}
+
+.footer__anchor {
+	font-size: 1.2rem;
+
+	color: inherit;
+	transition: color 0.3s ease 0s;
+	text-decoration: none;
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		color: $light_blue;
+	}
+}

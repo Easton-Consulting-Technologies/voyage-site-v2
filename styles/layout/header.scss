@@ -1,0 +1,177 @@
+//------------------------------------------------------------layout
+.header {
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	height: var(--height-header);
+	width: 100%;
+
+	font-size: 1rem;
+
+	will-change: transform;
+	transition: transform .3s ease;
+
+	@include z-index(header);
+
+	@include bp($point_2, min) {
+		padding: 5.2rem var(--gl-hr-indent) 3.6rem;
+	}
+
+	@include bp($point_3) {
+		padding: 5.6rem var(--gl-hr-indent) 3.2rem;
+	}
+
+	&.header--scroll_state {
+		transform: translateY(-5rem);
+	}
+}
+
+.header__in {
+	position: relative;
+	z-index: 2;
+
+	max-width: $page_width;
+	width: 100%;
+	margin: 0 auto;
+
+	display: flex;
+	gap: 2rem;
+
+	will-change: transform;
+	transition: transform .3s ease;
+
+	.header--scroll_state & {
+		transform: translateY(1.6rem);
+	}
+}
+
+//------------------------------------------------------------layout###
+
+.header_bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+
+	width: 100%;
+	height: 100%;
+}
+
+.header_bg__img {
+	@include cover_img;
+}
+
+.header__logo {
+	flex: 1 1 auto;
+}
+
+.header__logo_link {
+	display: block;
+
+	@include bp($point_2, min) {
+		width: 23.8rem;
+		height: 6.4rem;
+	}
+
+	@include bp($point_3) {
+		width: 19rem;
+		height: 6.2rem;
+	}
+}
+
+.header__logo_img {
+	@include contain_img;
+}
+
+.header__list {
+	@include bp($point_2, min) {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 4.4rem;
+
+		margin: auto 1.4rem .6rem 0;
+	}
+
+	@include bp($point_3) {
+		display: none;
+	}
+}
+.header__item {
+	& .dropdown-menu {
+        display: none;
+        position: absolute;
+        top: 90%;
+        z-index: 1000;
+        min-width: 160px;
+        box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+        background-color: #fff;
+        border: 1px solid rgba(0, 0, 0, 0.125);
+        border-radius: 0.25rem;
+        padding: 0.8rem 0.5rem;
+        transition: opacity 0.3s ease-in-out;
+    }
+	&:hover {
+        .dropdown-menu {
+          display: block;
+        }
+    }
+	.dropdown-item {
+		// Customize as needed
+	}
+
+}
+.header__link {
+	position: relative;
+
+	color: $white;
+	font-family: $font_gotham;
+	font-size: 1.4rem;
+	font-weight: 500;
+	text-transform: uppercase;
+
+	&.dropdown-toggle {
+		text-decoration: none;
+		&::before {
+			transform: scaleX(0) !important;
+		}
+		&:hover, :focus {
+			text-decoration: none !important;
+			&::before {
+				transform: scaleX(0) !important;
+			}
+		}
+	}
+
+	&::before {
+		content: '';
+		position: absolute;
+		bottom: 0;
+		left: 0;
+
+		width: 100%;
+		height: 1px;
+
+		background-color: currentColor;
+
+		transform: scaleX(0);
+		will-change: transform;
+		transition: transform .3s ease;
+	}
+
+	&:hover,
+	&:focus {
+		text-decoration: none;
+		.dropdown-menu {
+			display: block;
+		}
+	}
+
+	@media (any-hover: hover) {
+		&:hover {
+			&::before {
+				transform: scaleX(1);
+			}
+		}
+	}
+}

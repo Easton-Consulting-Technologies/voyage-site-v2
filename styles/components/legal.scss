@@ -1,0 +1,97 @@
+#privacy-policy, #terms-of-use {display:block;}
+.legal table.personalInfoTable tr:nth-child(1) th:nth-child(1) {width:341px;}
+.legal table.personalInfoTable tr td:nth-child(1) {font-weight:bold;}
+.legal {font-size:1.3rem;}
+.legal h1, .legal h2, .legal h3 {font-weight:bold;}
+.legal__title {
+    font-size:3rem;
+    color:#784DFF;
+    margin:2rem 0;
+    text-align: center;
+}
+.legal.hero {
+    background: linear-gradient(90deg, #4A2FAA 0%, #784DFF 100%);
+    & h1 {
+        font-size:5rem;
+        color:#fff;
+    }
+}
+.legal h1, .legal h2 {color:#784DFF;}
+.legal h1 {
+    font-size:3rem;
+}
+.legal h2 {
+    font-size:1.5rem;
+}
+.legal ul, .legal ol {
+    margin:2.5rem 2rem;
+    & li {padding:1rem 0;}
+}
+.legal table ol {margin:2.5rem 0rem;}
+.legal p {margin:1rem;}
+.legal ul {
+	padding-left:1rem;
+	list-style: disc;
+	& li {
+        list-style:inherit;
+    }
+}
+.legal ul.caliList {
+	& li {
+        &:nth-of-type(3), &:nth-of-type(4){
+            margin-left:2rem;
+            padding:0;
+        }
+    }
+}
+.legal table.caliTable {
+    tr {border:0;}
+    tr:nth-child(1) {
+        & th:nth-child(1) {border-bottom:0;}
+    }
+    tr:nth-child(2) {
+        & th:nth-child(1) {border-top:0;}
+    }
+    th:nth-child(1) {
+        text-align:left;
+    }
+    th:nth-child(1), td:nth-child(1) {font-weight:bold;}
+}
+.legal ol {
+	padding-left:1.2rem;
+	list-style: decimal;
+	& li {list-style:inherit;}
+}
+.legal table {
+    width:100%;
+    border-collapse:none;
+    border:2px solid #6B7A86;
+    & tr {
+        border:2px solid #6B7A86;
+        & th {
+            border:2px solid #6B7A86;
+            padding:1rem;}
+        & td {
+            border:2px solid #6B7A86;
+            padding:1rem;
+        }
+    }
+}
+@keyframes moveRight {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(100% + 100px)); /* Adjust 100px to the width of your image */
+    }
+  }
+  
+  .moving-image-container {
+    position: fixed;
+    top: 22vh;
+    left:-100px;
+    transform: translateX(0);
+    animation: moveRight 5s linear infinite; /* Adjust the duration as needed */
+    width: 100%;
+    height: auto; /* Ensure the aspect ratio is maintained */
+  }

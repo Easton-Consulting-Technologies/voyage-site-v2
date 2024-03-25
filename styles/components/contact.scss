@@ -1,0 +1,117 @@
+@import '/styles/helpers/helpers-all.scss';
+
+.contact {
+	color: $white;
+
+	@include bp($point_3) {
+		flex-direction: column;
+		gap: 2rem;
+	}
+}
+
+.contact__bg {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+.contact__img {
+	@include cover_img;
+}
+
+.contact__content_w {
+	display: flex;
+	justify-content: center;
+}
+
+.contact__content {
+	display: flex;
+
+	@include bp($point_2, min) {
+		gap: 9.2rem;
+		max-width: 119.8rem;
+	}
+
+	@include bp($point_3) {
+		flex-direction: column;
+		gap: 2rem;
+	}
+}
+
+.contact__info {
+	@include bp($point_2, min) {
+		width: 46%;
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+	}
+
+	p {
+		@include headline_2;
+
+		line-height: 1.2;
+
+		@include bp($point_3) {
+			display: none;
+		}
+	}
+}
+
+.contact__subtitle {
+	@include h6;
+
+	@include bp($point_2, min) {
+		line-height: 1.2;
+	}
+
+	@include bp($point_3) {
+		line-height: 1.14;
+	}
+
+	&:not(:last-child) {
+		@include bp($point_2, min) {
+			margin-bottom: 4.2rem;
+		}
+
+		@include bp($point_3) {
+			margin-bottom: 4.8rem;
+		}
+	}
+}
+
+.contact__title {
+	@include h3;
+
+	font-weight: 700;
+	color: $purple_0;
+
+	&:not(:last-child) {
+		@include bp($point_2, min) {
+			margin-bottom: 3.6rem;
+		}
+
+		@include bp($point_3) {
+			margin-bottom: 0.8rem;
+		}
+	}
+}
+
+.contact__form {
+	@include bp($point_2, min) {
+		width: 50%;
+	}
+
+	@include bp($point_3) {
+		width: 100%;
+	}
+}
+
+.form__input {
+	&:not(:last-child) {
+		margin-bottom: 3.2rem;
+	}
+}

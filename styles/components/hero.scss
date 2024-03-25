@@ -1,0 +1,98 @@
+.hero {
+	@include bp($point_3) {
+		padding-top: 1.6rem;
+	}
+}
+
+.hero__row {
+	@include bp($point_2, min) {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		margin: 0 -1rem -2rem 0;
+	}
+}
+
+.hero__column {
+	@include bp($point_2, min) {
+		width: 50%;
+		padding: 0 1rem 2rem 0;
+	}
+
+	&:not(:last-child) {
+		@include bp($point_3) {
+			margin-bottom: 2.8rem;
+		}
+	}
+}
+
+.hero__content {
+	@include bp($point_6, min) {
+		max-width: 58rem;
+	}
+
+	h1 {
+		line-height: normal;
+		color: $purple_0;
+		text-transform: uppercase;
+
+		@include bp($point_2, min) {
+			@include h1;
+		}
+
+		@include bp($point_3) {
+			@include h5;
+		}
+
+		strong {
+			display: block;
+			color: $purple_2;
+			font-weight: 600;
+		}
+
+		&:not(:last-child) {
+			@include bp($point_2, min) {
+				margin-bottom: .6rem;
+			}
+
+			@include bp($point_3) {
+				margin-bottom: 4px;
+			}
+		}
+	}
+
+	p {
+		color: $gray;
+
+		@include bp($point_2, min) {
+			@include headline_1;
+		}
+
+		@include bp($point_3) {
+			@include headline_4;
+
+			max-width: 90%;
+		}
+
+		&:not(:last-child) {
+			@include bp($point_2, min) {
+				margin-bottom: 6.4rem;
+			}
+
+			@include bp($point_3) {
+				margin-bottom: 3.5rem;
+			}
+		}
+	}
+
+	a {
+		color: inherit;
+	}
+}
+
+.tradingview-widget-container,
+.tradingview-widget-script {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
