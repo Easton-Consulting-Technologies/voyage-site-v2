@@ -28,9 +28,6 @@ const Footer = () => {
             </address>
           </div>
         </div>
-        <Link className="footer__anchor" href="/#features">
-          <sup>1</sup>
-        </Link>
         <div className="footer__text_w">
           <p>
             Risk warning: Use of information contained on this website is at
