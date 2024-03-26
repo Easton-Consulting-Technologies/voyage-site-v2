@@ -1,12 +1,13 @@
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
 
 const Footer = () => {
   return (
     <footer className="footer" data-id="footer">
       <div className="footer__in">
         <div className="footer__content">
-          <a className="footer__logo" href="https://voyagemarkets.net/">
+          <Link className="footer__logo" href="/">
             <Image
               className="footer__logo_img"
               src="/images/logo.svg"
@@ -15,7 +16,7 @@ const Footer = () => {
               width={300}
               height={81}
             />
-          </a>
+          </Link>
           <div className="footer__info">
             <p>
               <span>© </span>
@@ -27,9 +28,9 @@ const Footer = () => {
             </address>
           </div>
         </div>
-        <a className="footer__anchor" href="#features">
+        <Link className="footer__anchor" href="/#features">
           <sup>1</sup>
-        </a>
+        </Link>
         <div className="footer__text_w">
           <p>
             Risk warning: Use of information contained on this website is at
@@ -127,7 +128,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="footer__link_container">
-          <a className="footer__link" href="mailto:support@voyagemarkets.net">
+          <Link className="footer__link" href="mailto:support@voyagemarkets.net">
             <Image
               className="footer__link_icon"
               src="/images/mail.svg"
@@ -137,13 +138,13 @@ const Footer = () => {
         height={20}
             />
             support@voyagemarkets.net
-          </a>
-          <a className="footer__link" href="/privacy-policy">
+          </Link>
+          <Link className="footer__link" href="/privacy-policy">
             Privacy Policy
-          </a>
-          <a className="footer__link" href="/terms-of-use">
+          </Link>
+          <Link className="footer__link" href="/terms-of-use">
             Terms of Use
-          </a>
+          </Link>
         </div>
        
       </div>

@@ -4,14 +4,6 @@ import Link from 'next/link'
 import React from 'react'
 
 const Header = () => {
-  const handleClick = (id) => {
-	console.log(id);
-	// var element = document.getElementById("box");
-	// element.scrollIntoView();
-	// element.scrollIntoView(false);
-	// element.scrollIntoView({block: "end"});
-	// element.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
-  };
   return (
     <header className="header">
 			<picture className="header_bg"
@@ -28,13 +20,13 @@ const Header = () => {
 			/></picture>
 			<div className="header__in">
 				<div className="header__logo">
-					<a className="header__logo_link" href="https://voyagemarkets.net/"
+					<Link className="header__logo_link" href="/"
 						><Image className="header__logo_img" src='/images/logo.svg' alt="Voyage markets logo" loading="lazy" width={300} height={81}
-					/></a>
+					/></Link>
 				</div>
 				<ul className="header__list">
 					<li className="header__item">
-						<Link className="header__link" href="/" onClick={handleClick}>
+						<Link className="header__link" href="/">
 							HOME
 						</Link>
 					</li>
